@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero-vijay.jpg";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+  return <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-secondary via-background to-secondary/50" />
       <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -40,10 +38,7 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-4">
               <Link to="/contact" className="btn-primary group">
                 Book a Strategy Call
-                <ArrowRight
-                  size={18}
-                  className="ml-2 group-hover:translate-x-1 transition-transform"
-                />
+                <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link to="/portfolio" className="btn-secondary group">
                 <Play size={18} className="mr-2" />
@@ -87,11 +82,7 @@ const HeroSection = () => {
 
               {/* Main image */}
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src={heroImage}
-                  alt="Vijay - Digital Marketing Expert"
-                  className="w-full h-auto object-cover"
-                />
+                <img alt="Vijay - Digital Marketing Expert" className="w-full h-auto object-cover" src="/lovable-uploads/570f81cf-aae7-428a-9896-ce22f823124a.jpg" />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
               </div>
 
@@ -115,8 +106,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
