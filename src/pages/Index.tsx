@@ -1,13 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Layout from "@/components/layout/Layout";
+import HeroSection from "@/components/home/HeroSection";
+import AboutPreview from "@/components/home/AboutPreview";
+import ServicesPreview from "@/components/home/ServicesPreview";
+import WhyChooseMe from "@/components/home/WhyChooseMe";
+import PortfolioHighlights from "@/components/home/PortfolioHighlights";
+import Testimonials from "@/components/home/Testimonials";
+import CTABanner from "@/components/home/CTABanner";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <title>Marketing With Vijay | Performance-Driven Digital Marketer</title>
+        <meta
+          name="description"
+          content="Helping businesses scale using high-ROI Google Ads, Meta Ads, SEO, and full-stack Web & App Development. Book a free strategy call today."
+        />
+      </Helmet>
+      <Layout>
+        <HeroSection />
+        <AboutPreview />
+        <ServicesPreview />
+        <WhyChooseMe />
+        <PortfolioHighlights />
+        <Testimonials />
+        <CTABanner />
+      </Layout>
+    </>
   );
 };
 
