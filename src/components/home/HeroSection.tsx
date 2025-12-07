@@ -21,8 +21,15 @@ const HeroSection = () => {
       <div className="container-custom relative z-10 pt-8 pb-16 lg:pt-16 lg:pb-24">
         {/* Mobile Layout */}
         <div className="lg:hidden flex flex-col items-center text-center">
+          {/* Heading - Mobile (Above Image) */}
+          <h1 className="text-3xl sm:text-4xl font-serif font-bold text-foreground leading-tight mb-6">
+            I'm Vijay —{" "}
+            <span className="text-gradient">Performance-Driven</span> Digital
+            Marketer
+          </h1>
+
           {/* Photo with floating labels - Mobile */}
-          <div className="relative w-64 h-72 mb-8">
+          <div className="relative w-64 h-72 mb-6">
             <div className="relative w-full h-full">
               <img
                 src="/lovable-uploads/570f81cf-aae7-428a-9896-ce22f823124a.jpg"
@@ -47,13 +54,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Content - Mobile */}
-          <h1 className="text-3xl sm:text-4xl font-serif font-bold text-foreground leading-tight mb-4">
-            I'm Vijay —{" "}
-            <span className="text-gradient">Performance-Driven</span> Digital
-            Marketer
-          </h1>
-
+          {/* Description - Mobile */}
           <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-md">
             Helping businesses scale using high-ROI{" "}
             <span className="text-foreground font-medium">Google Ads</span>,{" "}
