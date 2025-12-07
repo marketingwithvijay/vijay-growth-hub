@@ -39,22 +39,31 @@ const HeroSection = () => {
             <div className="absolute -inset-4 bg-gradient-to-br from-lime-300/60 via-emerald-300/50 to-teal-400/60 rounded-[32px] blur-sm" />
             <div className="absolute -inset-3 bg-gradient-to-tr from-yellow-200/40 via-lime-300/50 to-cyan-300/40 rounded-[28px]" />
             
-            <div className="relative w-full h-full">
-              <img alt="Vijay - Digital Marketing Expert" className="w-full h-full object-cover object-top rounded-3xl shadow-2xl relative z-10" src="/lovable-uploads/c14aae44-ba64-4343-a742-dd24de9f0f2a.png" />
+            {/* Vertical Labels Behind Image - Mobile */}
+            <div className="absolute left-[8%] top-0 bottom-0 flex items-center z-[5]">
+              <div className="bg-background/70 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-medium shadow border border-border/30 -rotate-90 whitespace-nowrap">
+                Google Ads
+              </div>
+            </div>
+            <div className="absolute left-[28%] top-0 bottom-0 flex items-center z-[5]">
+              <div className="bg-background/70 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-medium shadow border border-border/30 -rotate-90 whitespace-nowrap">
+                Meta Ads
+              </div>
+            </div>
+            <div className="absolute right-[28%] top-0 bottom-0 flex items-center z-[5]">
+              <div className="bg-background/70 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-medium shadow border border-border/30 -rotate-90 whitespace-nowrap">
+                Web Dev
+              </div>
+            </div>
+            <div className="absolute right-[8%] top-0 bottom-0 flex items-center z-[5]">
+              <div className="bg-background/70 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-medium shadow border border-border/30 -rotate-90 whitespace-nowrap">
+                SEO
+              </div>
             </div>
             
-            {/* Diagonal Floating Labels - Mobile */}
-            <div className="absolute -top-1 -left-6 bg-background/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs font-medium shadow-lg border border-border/30 -rotate-[70deg] z-20">
-              Google Ads
-            </div>
-            <div className="absolute top-1/3 -right-8 bg-background/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs font-medium shadow-lg border border-border/30 rotate-[70deg] z-20">
-              Meta Ads
-            </div>
-            <div className="absolute bottom-1/4 -left-8 bg-background/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs font-medium shadow-lg border border-border/30 -rotate-[60deg] z-20">
-              Web Dev
-            </div>
-            <div className="absolute -bottom-1 -right-6 bg-background/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs font-medium shadow-lg border border-border/30 rotate-[60deg] z-20">
-              SEO
+            {/* Main Photo */}
+            <div className="relative w-full h-full z-10">
+              <img alt="Vijay - Digital Marketing Expert" className="w-full h-full object-cover object-top rounded-3xl shadow-2xl" src="/lovable-uploads/c14aae44-ba64-4343-a742-dd24de9f0f2a.png" />
             </div>
           </div>
 
@@ -154,30 +163,34 @@ const HeroSection = () => {
               <div className="absolute -inset-8 bg-gradient-to-br from-lime-300/60 via-emerald-300/50 to-teal-400/60 rounded-[40px] blur-sm" />
               <div className="absolute -inset-6 bg-gradient-to-tr from-yellow-200/40 via-lime-300/50 to-cyan-300/40 rounded-[36px]" />
               
+              {/* Vertical Labels Behind Image - Left Side */}
+              <div className="absolute left-[5%] top-0 bottom-0 flex items-center z-[5]">
+                <div className="bg-background/70 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium shadow-lg border border-border/30 -rotate-90 whitespace-nowrap origin-center">
+                  Google Ads
+                </div>
+              </div>
+              <div className="absolute left-[22%] top-0 bottom-0 flex items-center z-[5]">
+                <div className="bg-background/70 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium shadow-lg border border-border/30 -rotate-90 whitespace-nowrap origin-center">
+                  Meta Ads
+                </div>
+              </div>
+              
+              {/* Vertical Labels Behind Image - Right Side */}
+              <div className="absolute right-[22%] top-0 bottom-0 flex items-center z-[5]">
+                <div className="bg-background/70 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium shadow-lg border border-border/30 -rotate-90 whitespace-nowrap origin-center">
+                  Web Dev
+                </div>
+              </div>
+              <div className="absolute right-[5%] top-0 bottom-0 flex items-center z-[5]">
+                <div className="bg-background/70 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium shadow-lg border border-border/30 -rotate-90 whitespace-nowrap origin-center">
+                  SEO
+                </div>
+              </div>
+              
               {/* Main Photo */}
-              <div className="relative w-80 xl:w-96 h-[420px] xl:h-[500px]">
-                <img src="/lovable-uploads/570f81cf-aae7-428a-9896-ce22f823124a.jpg" alt="Vijay - Digital Marketing Expert" className="w-full h-full object-cover object-top rounded-3xl shadow-2xl relative z-10" />
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-foreground/5 to-transparent z-10" />
-              </div>
-
-              {/* Diagonal Floating Labels */}
-              <div className="absolute top-[5%] -left-20 bg-background/80 backdrop-blur-md px-5 py-2 rounded-lg text-sm font-medium shadow-xl border border-border/30 -rotate-[75deg] animate-float z-20">
-                Google Ads
-              </div>
-              <div className="absolute top-[35%] -left-24 bg-background/80 backdrop-blur-md px-5 py-2 rounded-lg text-sm font-medium shadow-xl border border-border/30 -rotate-[65deg] animate-float stagger-2 z-20">
-                Meta Ads
-              </div>
-              <div className="absolute bottom-[25%] -left-20 bg-background/80 backdrop-blur-md px-5 py-2 rounded-lg text-sm font-medium shadow-xl border border-border/30 -rotate-[55deg] animate-float stagger-3 z-20">
-                Web Dev
-              </div>
-              <div className="absolute top-[10%] -right-16 bg-background/80 backdrop-blur-md px-5 py-2 rounded-lg text-sm font-medium shadow-xl border border-border/30 rotate-[75deg] animate-float stagger-2 z-20">
-                Branding
-              </div>
-              <div className="absolute top-[40%] -right-20 bg-background/80 backdrop-blur-md px-5 py-2 rounded-lg text-sm font-medium shadow-xl border border-border/30 rotate-[65deg] animate-float stagger-3 z-20">
-                SEO
-              </div>
-              <div className="absolute bottom-[20%] -right-16 bg-background/80 backdrop-blur-md px-5 py-2 rounded-lg text-sm font-medium shadow-xl border border-border/30 rotate-[55deg] animate-float z-20">
-                App Dev
+              <div className="relative w-80 xl:w-96 h-[420px] xl:h-[500px] z-10">
+                <img src="/lovable-uploads/570f81cf-aae7-428a-9896-ce22f823124a.jpg" alt="Vijay - Digital Marketing Expert" className="w-full h-full object-cover object-top rounded-3xl shadow-2xl" />
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-foreground/5 to-transparent" />
               </div>
             </div>
           </div>
