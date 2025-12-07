@@ -33,37 +33,41 @@ const HeroSection = () => {
             Marketer
           </h1>
 
-          {/* Photo with floating labels - Mobile */}
-          <div className="relative w-64 h-72 mb-6">
-            {/* Gradient Background Behind Image */}
-            <div className="absolute -inset-4 bg-gradient-to-br from-lime-300/60 via-emerald-300/50 to-teal-400/60 rounded-[32px] blur-sm" />
-            <div className="absolute -inset-3 bg-gradient-to-tr from-yellow-200/40 via-lime-300/50 to-cyan-300/40 rounded-[28px]" />
+          {/* Photo with vertical labels - Mobile */}
+          <div className="relative w-72 h-80 mb-6">
+            {/* Gradient Background - Seamless blend */}
+            <div className="absolute inset-0 bg-gradient-to-br from-lime-200/80 via-emerald-200/70 to-teal-300/80" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-yellow-100/60 via-lime-200/50 to-cyan-200/60" />
             
-            {/* Vertical Labels Behind Image - Mobile */}
-            <div className="absolute left-[8%] top-0 bottom-0 flex items-center z-[5]">
-              <div className="bg-background/70 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-medium shadow border border-border/30 -rotate-90 whitespace-nowrap">
+            {/* Vertical Labels - Visible behind image */}
+            <div className="absolute left-[2%] top-0 bottom-0 flex items-center z-[15]">
+              <div className="bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded text-[10px] font-medium shadow-md -rotate-90 whitespace-nowrap">
                 Google Ads
               </div>
             </div>
-            <div className="absolute left-[28%] top-0 bottom-0 flex items-center z-[5]">
-              <div className="bg-background/70 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-medium shadow border border-border/30 -rotate-90 whitespace-nowrap">
+            <div className="absolute left-[24%] top-0 bottom-0 flex items-center z-[15]">
+              <div className="bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded text-[10px] font-medium shadow-md -rotate-90 whitespace-nowrap">
                 Meta Ads
               </div>
             </div>
-            <div className="absolute right-[28%] top-0 bottom-0 flex items-center z-[5]">
-              <div className="bg-background/70 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-medium shadow border border-border/30 -rotate-90 whitespace-nowrap">
+            <div className="absolute right-[24%] top-0 bottom-0 flex items-center z-[15]">
+              <div className="bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded text-[10px] font-medium shadow-md -rotate-90 whitespace-nowrap">
                 Web Dev
               </div>
             </div>
-            <div className="absolute right-[8%] top-0 bottom-0 flex items-center z-[5]">
-              <div className="bg-background/70 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-medium shadow border border-border/30 -rotate-90 whitespace-nowrap">
+            <div className="absolute right-[2%] top-0 bottom-0 flex items-center z-[15]">
+              <div className="bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded text-[10px] font-medium shadow-md -rotate-90 whitespace-nowrap">
                 SEO
               </div>
             </div>
             
-            {/* Main Photo */}
-            <div className="relative w-full h-full z-10">
-              <img alt="Vijay - Digital Marketing Expert" className="w-full h-full object-cover object-top rounded-3xl shadow-2xl" src="/lovable-uploads/c14aae44-ba64-4343-a742-dd24de9f0f2a.png" />
+            {/* Main Photo - No rounded corners, blends with gradient */}
+            <div className="absolute inset-0 flex items-end justify-center z-10">
+              <img 
+                alt="Vijay - Digital Marketing Expert" 
+                className="w-[85%] h-[95%] object-cover object-top" 
+                src="/lovable-uploads/c14aae44-ba64-4343-a742-dd24de9f0f2a.png" 
+              />
             </div>
           </div>
 
@@ -156,41 +160,42 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right - Photo with floating labels */}
+          {/* Right - Photo with vertical labels */}
           <div className="relative flex justify-center animate-fade-up stagger-2">
-            <div className="relative">
-              {/* Gradient Background Behind Image */}
-              <div className="absolute -inset-8 bg-gradient-to-br from-lime-300/60 via-emerald-300/50 to-teal-400/60 rounded-[40px] blur-sm" />
-              <div className="absolute -inset-6 bg-gradient-to-tr from-yellow-200/40 via-lime-300/50 to-cyan-300/40 rounded-[36px]" />
+            <div className="relative w-[420px] xl:w-[480px] h-[520px] xl:h-[600px]">
+              {/* Gradient Background - Seamless blend like reference */}
+              <div className="absolute inset-0 bg-gradient-to-br from-lime-200/90 via-emerald-200/80 to-teal-300/90" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-yellow-100/70 via-lime-200/60 to-cyan-200/70" />
               
-              {/* Vertical Labels Behind Image - Left Side */}
-              <div className="absolute left-[5%] top-0 bottom-0 flex items-center z-[5]">
-                <div className="bg-background/70 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium shadow-lg border border-border/30 -rotate-90 whitespace-nowrap origin-center">
+              {/* Vertical Labels - Visible on sides */}
+              <div className="absolute left-[3%] top-0 bottom-0 flex items-center z-[15]">
+                <div className="bg-white/85 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium shadow-lg -rotate-90 whitespace-nowrap">
                   Google Ads
                 </div>
               </div>
-              <div className="absolute left-[22%] top-0 bottom-0 flex items-center z-[5]">
-                <div className="bg-background/70 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium shadow-lg border border-border/30 -rotate-90 whitespace-nowrap origin-center">
+              <div className="absolute left-[20%] top-0 bottom-0 flex items-center z-[15]">
+                <div className="bg-white/85 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium shadow-lg -rotate-90 whitespace-nowrap">
                   Meta Ads
                 </div>
               </div>
-              
-              {/* Vertical Labels Behind Image - Right Side */}
-              <div className="absolute right-[22%] top-0 bottom-0 flex items-center z-[5]">
-                <div className="bg-background/70 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium shadow-lg border border-border/30 -rotate-90 whitespace-nowrap origin-center">
+              <div className="absolute right-[20%] top-0 bottom-0 flex items-center z-[15]">
+                <div className="bg-white/85 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium shadow-lg -rotate-90 whitespace-nowrap">
                   Web Dev
                 </div>
               </div>
-              <div className="absolute right-[5%] top-0 bottom-0 flex items-center z-[5]">
-                <div className="bg-background/70 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium shadow-lg border border-border/30 -rotate-90 whitespace-nowrap origin-center">
+              <div className="absolute right-[3%] top-0 bottom-0 flex items-center z-[15]">
+                <div className="bg-white/85 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium shadow-lg -rotate-90 whitespace-nowrap">
                   SEO
                 </div>
               </div>
               
-              {/* Main Photo */}
-              <div className="relative w-80 xl:w-96 h-[420px] xl:h-[500px] z-10">
-                <img src="/lovable-uploads/570f81cf-aae7-428a-9896-ce22f823124a.jpg" alt="Vijay - Digital Marketing Expert" className="w-full h-full object-cover object-top rounded-3xl shadow-2xl" />
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-foreground/5 to-transparent" />
+              {/* Main Photo - No border radius, blends with gradient */}
+              <div className="absolute inset-0 flex items-end justify-center z-10">
+                <img 
+                  src="/lovable-uploads/570f81cf-aae7-428a-9896-ce22f823124a.jpg" 
+                  alt="Vijay - Digital Marketing Expert" 
+                  className="w-[75%] h-[92%] object-cover object-top" 
+                />
               </div>
             </div>
           </div>
