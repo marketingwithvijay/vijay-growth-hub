@@ -1,19 +1,24 @@
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
-
 const HeroSection = () => {
   const services = ["Google Ads", "Meta Ads", "Web Development", "App Development", "SEO"];
-  
-  const floatingLabels = [
-    { text: "Google Ads", position: "top-[15%] -left-4 -rotate-12" },
-    { text: "Meta Ads", position: "top-[35%] -left-8 rotate-6" },
-    { text: "Web Dev", position: "bottom-[35%] -left-6 -rotate-6" },
-    { text: "SEO", position: "top-[20%] -right-4 rotate-12" },
-    { text: "App Dev", position: "top-[45%] -right-6 -rotate-6" },
-  ];
-
-  return (
-    <section className="relative min-h-screen overflow-hidden">
+  const floatingLabels = [{
+    text: "Google Ads",
+    position: "top-[15%] -left-4 -rotate-12"
+  }, {
+    text: "Meta Ads",
+    position: "top-[35%] -left-8 rotate-6"
+  }, {
+    text: "Web Dev",
+    position: "bottom-[35%] -left-6 -rotate-6"
+  }, {
+    text: "SEO",
+    position: "top-[20%] -right-4 rotate-12"
+  }, {
+    text: "App Dev",
+    position: "top-[45%] -right-6 -rotate-6"
+  }];
+  return <section className="relative min-h-screen overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/30" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent" />
@@ -31,11 +36,7 @@ const HeroSection = () => {
           {/* Photo with floating labels - Mobile */}
           <div className="relative w-64 h-72 mb-6">
             <div className="relative w-full h-full">
-              <img
-                src="/lovable-uploads/570f81cf-aae7-428a-9896-ce22f823124a.jpg"
-                alt="Vijay - Digital Marketing Expert"
-                className="w-full h-full object-cover object-top rounded-3xl shadow-2xl"
-              />
+              <img alt="Vijay - Digital Marketing Expert" className="w-full h-full object-cover object-top rounded-3xl shadow-2xl" src="/lovable-uploads/c14aae44-ba64-4343-a742-dd24de9f0f2a.png" />
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-foreground/10 to-transparent" />
             </div>
             
@@ -148,11 +149,7 @@ const HeroSection = () => {
             <div className="relative">
               {/* Main Photo */}
               <div className="relative w-80 xl:w-96 h-[420px] xl:h-[500px]">
-                <img
-                  src="/lovable-uploads/570f81cf-aae7-428a-9896-ce22f823124a.jpg"
-                  alt="Vijay - Digital Marketing Expert"
-                  className="w-full h-full object-cover object-top rounded-3xl shadow-2xl"
-                />
+                <img src="/lovable-uploads/570f81cf-aae7-428a-9896-ce22f823124a.jpg" alt="Vijay - Digital Marketing Expert" className="w-full h-full object-cover object-top rounded-3xl shadow-2xl" />
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-foreground/10 to-transparent" />
               </div>
 
@@ -181,18 +178,11 @@ const HeroSection = () => {
 
         {/* Service Pills - Bottom */}
         <div className="hidden lg:flex justify-center gap-4 mt-12 pt-8 border-t border-border/30">
-          {services.map((service, index) => (
-            <div
-              key={service}
-              className="px-6 py-2.5 rounded-full bg-card/50 backdrop-blur-sm border border-border/50 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-card hover:border-primary/30 transition-all cursor-pointer"
-            >
+          {services.map((service, index) => <div key={service} className="px-6 py-2.5 rounded-full bg-card/50 backdrop-blur-sm border border-border/50 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-card hover:border-primary/30 transition-all cursor-pointer">
               {service}
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
