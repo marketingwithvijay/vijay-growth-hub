@@ -35,10 +35,11 @@ const HeroSection = () => {
 
           {/* Photo with vertical labels - Mobile */}
           <div className="relative w-72 h-80 mb-6">
-            {/* Background matching hero section with grid */}
+            {/* Background matching hero section exactly */}
+            <div className="absolute inset-0 bg-background" />
             <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-accent/10 to-primary/20" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/15 via-transparent to-transparent" />
-            <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(hsl(var(--border)/0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)/0.3) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+            <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to right, hsl(0 0% 0% / 0.03) 1px, transparent 1px), linear-gradient(to bottom, hsl(0 0% 0% / 0.03) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
             
             {/* Vertical Labels - Visible behind image */}
             <div className="absolute left-[2%] top-0 bottom-0 flex items-center z-[15]">
@@ -164,10 +165,11 @@ const HeroSection = () => {
           {/* Right - Photo with vertical labels */}
           <div className="relative flex justify-center animate-fade-up stagger-2">
             <div className="relative w-[420px] xl:w-[480px] h-[520px] xl:h-[600px]">
-              {/* Background matching hero section with grid */}
+              {/* Background matching hero section exactly */}
+              <div className="absolute inset-0 bg-background" />
               <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-accent/10 to-primary/20" />
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/15 via-transparent to-transparent" />
-              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(hsl(var(--border)/0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)/0.3) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to right, hsl(0 0% 0% / 0.03) 1px, transparent 1px), linear-gradient(to bottom, hsl(0 0% 0% / 0.03) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
               
               {/* Vertical Labels - Visible on sides */}
               <div className="absolute left-[3%] top-0 bottom-0 flex items-center z-[15]">
