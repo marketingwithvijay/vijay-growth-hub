@@ -19,9 +19,9 @@ const HeroSection = () => {
     position: "top-[45%] -right-6 -rotate-6"
   }];
   return <section className="relative min-h-screen overflow-hidden">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-accent/10 to-primary/20" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/15 via-transparent to-transparent" />
+      {/* Gradient Background - Same as image background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-200/90 via-amber-200/80 to-yellow-200/90" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-orange-100/70 via-amber-100/60 to-yellow-100/70" />
       
       <div className="container-custom relative z-10 pt-8 pb-16 lg:pt-16 lg:pb-24">
         {/* Mobile Layout */}
@@ -35,9 +35,7 @@ const HeroSection = () => {
 
           {/* Photo with vertical labels - Mobile */}
           <div className="relative w-72 h-80 mb-6">
-            {/* Gradient Background - Seamless blend */}
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-200/80 via-amber-200/70 to-yellow-200/80" />
-            <div className="absolute inset-0 bg-gradient-to-tr from-orange-100/60 via-amber-100/50 to-yellow-100/60" />
+            {/* No separate background - uses hero section background */}
             
             {/* Vertical Labels - Visible behind image */}
             <div className="absolute left-[2%] top-0 bottom-0 flex items-center z-[15]">
@@ -163,9 +161,7 @@ const HeroSection = () => {
           {/* Right - Photo with vertical labels */}
           <div className="relative flex justify-center animate-fade-up stagger-2">
             <div className="relative w-[420px] xl:w-[480px] h-[520px] xl:h-[600px]">
-              {/* Gradient Background - Seamless blend like reference */}
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-200/90 via-amber-200/80 to-yellow-200/90" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-orange-100/70 via-amber-100/60 to-yellow-100/70" />
+              {/* No separate background - uses hero section background */}
               
               {/* Vertical Labels - Visible on sides */}
               <div className="absolute left-[3%] top-0 bottom-0 flex items-center z-[15]">
