@@ -197,29 +197,6 @@ const Blog = () => {
             </div>
           </div>
         </section>
-
-        {/* Newsletter CTA */}
-        <section className="py-20 bg-primary text-primary-foreground">
-          <div className="container-custom text-center">
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4">
-              Subscribe to My Newsletter
-            </h2>
-            <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Get the latest marketing insights, tips, and strategies delivered
-              straight to your inbox.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-xl bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-primary-foreground/40"
-              />
-              <button type="submit" className="btn-accent">
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </section>
       </Layout>
     </>
   );
