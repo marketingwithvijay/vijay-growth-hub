@@ -1,40 +1,31 @@
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
+
 const HeroSection = () => {
   const services = ["Google Ads", "Meta Ads", "Web Development", "App Development", "SEO"];
-  const floatingLabels = [{
-    text: "Google Ads",
-    position: "top-[15%] -left-4 -rotate-12"
-  }, {
-    text: "Meta Ads",
-    position: "top-[35%] -left-8 rotate-6"
-  }, {
-    text: "Web Dev",
-    position: "bottom-[35%] -left-6 -rotate-6"
-  }, {
-    text: "SEO",
-    position: "top-[20%] -right-4 rotate-12"
-  }, {
-    text: "App Dev",
-    position: "top-[45%] -right-6 -rotate-6"
-  }];
+
   return <section className="relative min-h-screen overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-accent/10 to-primary/20" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/15 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/15 via-transparent to-transparent" />
+      
+      {/* Animated floating shapes */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-primary/5 rounded-full blur-2xl animate-float" />
       
       <div className="container-custom relative z-10 pt-8 pb-16 lg:pt-16 lg:pb-24">
         {/* Mobile Layout */}
         <div className="lg:hidden flex flex-col items-center text-center">
           {/* Heading - Mobile (Above Image) */}
-          <h1 className="text-3xl sm:text-4xl font-serif font-bold text-foreground leading-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl font-serif font-bold text-foreground leading-tight mb-6 opacity-0 animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
             I'm Vijay —{" "}
             <span className="text-gradient">Performance-Driven</span> Digital
             Marketer
           </h1>
 
           {/* Photo with vertical labels - Mobile */}
-          <div className="relative w-72 h-80 mb-6">
+          <div className="relative w-72 h-80 mb-6 opacity-0 animate-scale-in" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
             {/* Background matching hero section exactly */}
             <div className="absolute inset-0 bg-background" />
             <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-accent/10 to-primary/20" />
@@ -74,7 +65,7 @@ const HeroSection = () => {
           </div>
 
           {/* Description - Mobile */}
-          <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-md">
+          <p className="text-base text-muted-foreground leading-relaxed mb-6 max-w-md opacity-0 animate-fade-up" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
             Helping businesses scale using high-ROI{" "}
             <span className="text-foreground font-medium">Google Ads</span>,{" "}
             <span className="text-foreground font-medium">Meta Ads</span>,{" "}
@@ -82,12 +73,12 @@ const HeroSection = () => {
             <span className="text-foreground font-medium">Web & App Development</span>.
           </p>
 
-          <Link to="/contact" className="btn-primary w-full max-w-xs mb-8">
+          <Link to="/contact" className="btn-primary w-full max-w-xs mb-8 opacity-0 animate-fade-up hover:scale-105 transition-transform" style={{ animationDelay: '0.7s', animationFillMode: 'forwards' }}>
             Let's Work Together
           </Link>
 
           {/* Stats - Mobile */}
-          <div className="flex justify-center gap-6 mb-8">
+          <div className="flex justify-center gap-6 mb-8 opacity-0 animate-fade-up" style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}>
             <div className="text-center">
               <div className="text-2xl font-serif font-bold text-foreground">4+</div>
               <div className="text-xs text-muted-foreground">Years Exp</div>
@@ -106,19 +97,19 @@ const HeroSection = () => {
         {/* Desktop Layout */}
         <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
-          <div className="space-y-6 animate-fade-up">
-            <div className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-              <span>👋</span>
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-2 text-sm text-muted-foreground opacity-0 animate-fade-up" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
+              <span className="animate-[wave_2s_ease-in-out_infinite]">👋</span>
               <span>Hi, Let's Make Your Business Grow</span>
             </div>
 
-            <h1 className="text-5xl xl:text-6xl font-serif font-bold text-foreground leading-tight">
+            <h1 className="text-5xl xl:text-6xl font-serif font-bold text-foreground leading-tight opacity-0 animate-fade-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
               I'm Vijay —{" "}
               <span className="text-gradient">Performance-Driven</span> Digital
               Marketer.
             </h1>
 
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-lg opacity-0 animate-fade-up" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
               Helping businesses scale using high-ROI{" "}
               <span className="text-foreground font-medium">Google Ads</span>,{" "}
               <span className="text-foreground font-medium">Meta Ads</span>,{" "}
@@ -126,8 +117,8 @@ const HeroSection = () => {
               <span className="text-foreground font-medium">Web & App Development</span>.
             </p>
 
-            <div className="flex items-center gap-6 pt-2">
-              <Link to="/contact" className="btn-primary">
+            <div className="flex items-center gap-6 pt-2 opacity-0 animate-fade-up" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
+              <Link to="/contact" className="btn-primary hover:scale-105 transition-transform">
                 Let's Work Together?
               </Link>
               
@@ -146,25 +137,25 @@ const HeroSection = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex items-center gap-4 pt-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors">
+            <div className="flex items-center gap-4 pt-4 opacity-0 animate-fade-up" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
+              <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 hover:scale-110 transition-all duration-300">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 hover:scale-110 transition-all duration-300">
                 <Twitter size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 hover:scale-110 transition-all duration-300">
                 <Github size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 hover:scale-110 transition-all duration-300">
                 <Linkedin size={18} />
               </a>
             </div>
           </div>
 
           {/* Right - Photo with vertical labels */}
-          <div className="relative flex justify-center animate-fade-up stagger-2">
-            <div className="relative w-[420px] xl:w-[480px] h-[520px] xl:h-[600px]">
+          <div className="relative flex justify-center opacity-0 animate-scale-in" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+            <div className="relative w-[420px] xl:w-[480px] h-[520px] xl:h-[600px] hover:scale-[1.02] transition-transform duration-500">
               {/* Background matching hero section exactly */}
               <div className="absolute inset-0 bg-background" />
               <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-accent/10 to-primary/20" />
@@ -207,7 +198,11 @@ const HeroSection = () => {
 
         {/* Service Pills - Bottom */}
         <div className="hidden lg:flex justify-center gap-4 mt-12 pt-8 border-t border-border/30">
-          {services.map((service, index) => <div key={service} className="px-6 py-2.5 rounded-full bg-card/50 backdrop-blur-sm border border-border/50 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-card hover:border-primary/30 transition-all cursor-pointer">
+          {services.map((service, index) => <div 
+              key={service} 
+              className="px-6 py-2.5 rounded-full bg-card/50 backdrop-blur-sm border border-border/50 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-105 transition-all duration-300 cursor-pointer opacity-0 animate-fade-up"
+              style={{ animationDelay: `${1 + index * 0.1}s`, animationFillMode: 'forwards' }}
+            >
               {service}
             </div>)}
         </div>
