@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-foreground text-background">
+  return <footer className="bg-foreground text-background">
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
@@ -15,22 +13,13 @@ const Footer = () => {
               Helping businesses scale with performance marketing, modern web development, and strategic digital systems.
             </p>
             <div className="flex gap-4">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent transition-colors"
-              >
+              <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent transition-colors">
                 <Linkedin size={18} />
               </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent transition-colors"
-              >
+              <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent transition-colors">
                 <Twitter size={18} />
               </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent transition-colors"
-              >
+              <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent transition-colors">
                 <Instagram size={18} />
               </a>
             </div>
@@ -40,18 +29,11 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-serif font-semibold">Quick Links</h4>
             <ul className="space-y-2">
-              {["Home", "About", "Services", "Portfolio", "Blog", "Contact"].map(
-                (link) => (
-                  <li key={link}>
-                    <Link
-                      to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
-                      className="text-background/70 hover:text-accent transition-colors text-sm"
-                    >
+              {["Home", "About", "Services", "Portfolio", "Blog", "Contact"].map(link => <li key={link}>
+                    <Link to={link === "Home" ? "/" : `/${link.toLowerCase()}`} className="text-background/70 hover:text-accent transition-colors text-sm">
                       {link}
                     </Link>
-                  </li>
-                )
-              )}
+                  </li>)}
             </ul>
           </div>
 
@@ -59,23 +41,11 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-serif font-semibold">Services</h4>
             <ul className="space-y-2">
-              {[
-                "Google Ads",
-                "Meta Ads",
-                "Website Development",
-                "App Development",
-                "GMB Optimization",
-                "Local SEO",
-              ].map((service) => (
-                <li key={service}>
-                  <Link
-                    to="/services"
-                    className="text-background/70 hover:text-accent transition-colors text-sm"
-                  >
+              {["Google Ads", "Meta Ads", "Website Development", "App Development", "GMB Optimization", "Local SEO"].map(service => <li key={service}>
+                  <Link to="/services" className="text-background/70 hover:text-accent transition-colors text-sm">
                     {service}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -83,16 +53,14 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-serif font-semibold">Contact</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-background/70 text-sm">
-                <Phone size={16} className="text-accent" />
+              <li className="flex items-center gap-3 text-background/70 text-sm">+91 9859641115<Phone size={16} className="text-accent" />
                 +91 98765 43210
               </li>
               <li className="flex items-center gap-3 text-background/70 text-sm">
                 <Mail size={16} className="text-accent" />
                 hello@marketingwithvijay.com
               </li>
-              <li className="flex items-start gap-3 text-background/70 text-sm">
-                <MapPin size={16} className="text-accent mt-0.5" />
+              <li className="flex items-start gap-3 text-background/70 text-sm">Guwahati, Assam, India<MapPin size={16} className="text-accent mt-0.5" />
                 Mumbai, India
               </li>
             </ul>
@@ -113,8 +81,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
