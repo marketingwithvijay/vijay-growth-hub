@@ -142,13 +142,13 @@ const Gallery = () => {
             {filteredImages.map((image, index) => (
               <div
                 key={image.id}
-                className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer card-shadow"
+                className="group relative rounded-2xl overflow-hidden cursor-pointer card-shadow bg-muted/30"
                 onClick={() => openLightbox(index)}
               >
                 <img
                   src={image.src}
                   alt={image.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-6">
