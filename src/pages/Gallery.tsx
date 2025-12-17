@@ -16,6 +16,18 @@ const galleryImages = [
     title: "Achievement 2",
     category: "achievements",
   },
+  {
+    id: 7,
+    src: "/lovable-uploads/ai-power-weekend-certificate.webp",
+    title: "The Ultimate AI Power Weekend Certificate",
+    category: "achievements",
+  },
+  {
+    id: 8,
+    src: "/lovable-uploads/meta-ads-certificate.webp",
+    title: "Meta Ads Course Certificate",
+    category: "achievements",
+  },
   // Placeholder images for demonstration
   {
     id: 3,
