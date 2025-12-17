@@ -28,6 +28,12 @@ const galleryImages = [
     title: "Meta Ads Course Certificate",
     category: "achievements",
   },
+  {
+    id: 9,
+    src: "/lovable-uploads/digital-marketing-certificate.webp",
+    title: "Certificate of Specialization in Digital Marketing",
+    category: "achievements",
+  },
   // Placeholder images for demonstration
   {
     id: 3,
