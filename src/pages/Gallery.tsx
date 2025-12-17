@@ -29,12 +29,6 @@ const galleryImages = [
     category: "achievements",
   },
   {
-    id: 9,
-    src: "/lovable-uploads/digital-marketing-certificate.webp",
-    title: "Certificate of Specialization in Digital Marketing",
-    category: "achievements",
-  },
-  {
     id: 10,
     src: "/lovable-uploads/assam-career-hub-certificate.webp",
     title: "Assam Career Hub - Digital Marketing Specialization",
