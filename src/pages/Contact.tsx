@@ -16,8 +16,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 98765 43210",
-    href: "tel:+919876543210",
+    value: "+91 98596 41115",
+    href: "tel:+919859641115",
   },
   {
     icon: Mail,
@@ -57,18 +57,30 @@ const Contact = () => {
     service: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    
+    // Format message for WhatsApp
+    const message = `*New Contact Form Submission*
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone || 'Not provided'}
+*Service Needed:* ${formData.service}
 
-    toast.success("Message sent successfully! I'll get back to you within 24 hours.");
+*Message:*
+${formData.message}`;
+
+    // Encode message and open WhatsApp
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/919859641115?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+    
+    toast.success("Opening WhatsApp! Click send to deliver your message.");
     setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-    setIsSubmitting(false);
   };
 
   return (
@@ -138,7 +150,7 @@ const Contact = () => {
 
                 {/* WhatsApp Button */}
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/919859641115"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-green-500 text-white font-medium hover:bg-green-600 transition-colors"
@@ -264,20 +276,10 @@ const Contact = () => {
 
                     <button
                       type="submit"
-                      disabled={isSubmitting}
-                      className="btn-primary w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="btn-primary w-full sm:w-auto"
                     >
-                      {isSubmitting ? (
-                        <>
-                          <span className="animate-spin mr-2">⏳</span>
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          <Send size={18} className="mr-2" />
-                          Send Message
-                        </>
-                      )}
+                      <Send size={18} className="mr-2" />
+                      Send Message
                     </button>
                   </form>
                 </div>
