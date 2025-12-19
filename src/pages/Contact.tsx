@@ -28,7 +28,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Mumbai, India",
+    value: "Guwahati, Assam, India",
     href: "#",
   },
   {
