@@ -2,6 +2,26 @@ import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
+
+const ImageWithLoader = ({ src, alt, className, onClick }: { src: string; alt: string; className?: string; onClick?: () => void }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  return (
+    <div className="relative" onClick={onClick}>
+      {!isLoaded && (
+        <Skeleton className="absolute inset-0 w-full h-64 rounded-2xl" />
+      )}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        onLoad={() => setIsLoaded(true)}
+        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+      />
+    </div>
+  );
+};
 
 const galleryImages = [
   {
@@ -149,14 +169,14 @@ const Gallery = () => {
               <div
                 key={image.id}
                 className="group relative rounded-2xl overflow-hidden cursor-pointer card-shadow bg-muted/30"
-                onClick={() => openLightbox(index)}
               >
-                <img
+                <ImageWithLoader
                   src={image.src}
                   alt={image.title}
                   className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                  onClick={() => openLightbox(index)}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="text-lg font-semibold text-white">
                       {image.title}
