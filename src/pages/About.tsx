@@ -132,8 +132,8 @@ const About = () => {
           </div>
         </section>
 
-        {/* Process Section */}
-        <section className="py-20 bg-secondary/50">
+        {/* Process Section - Roadmap Style */}
+        <section className="py-20 bg-secondary/50 overflow-hidden">
           <div className="container-custom">
             <div className="text-center max-w-2xl mx-auto mb-14 animate-fade-up">
               <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
@@ -144,26 +144,97 @@ const About = () => {
               </h2>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-              {processSteps.map((step, index) => (
-                <div
-                  key={step.title}
-                  className={`card-premium text-center animate-fade-up stagger-${index + 1}`}
-                >
-                  <div className="w-14 h-14 mx-auto rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
-                    <step.icon size={24} className="text-primary" />
-                  </div>
-                  <div className="text-sm font-semibold text-accent mb-2">
-                    Step {index + 1}
-                  </div>
-                  <h3 className="text-lg font-serif font-semibold text-foreground mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {step.description}
-                  </p>
-                </div>
-              ))}
+            {/* Roadmap Container */}
+            <div className="relative max-w-5xl mx-auto">
+              {/* SVG Winding Road */}
+              <svg
+                className="absolute inset-0 w-full h-full pointer-events-none hidden lg:block"
+                viewBox="0 0 1000 600"
+                preserveAspectRatio="none"
+              >
+                {/* Road shadow */}
+                <path
+                  d="M 50 80 Q 250 80, 300 150 T 500 220 T 700 150 T 950 220"
+                  fill="none"
+                  stroke="hsl(var(--muted))"
+                  strokeWidth="50"
+                  strokeLinecap="round"
+                  className="opacity-30"
+                />
+                {/* Main road */}
+                <path
+                  d="M 50 80 Q 250 80, 300 150 T 500 220 T 700 150 T 950 220"
+                  fill="none"
+                  stroke="hsl(var(--foreground))"
+                  strokeWidth="40"
+                  strokeLinecap="round"
+                  className="opacity-80"
+                />
+                {/* Road center line (dashed) */}
+                <path
+                  d="M 50 80 Q 250 80, 300 150 T 500 220 T 700 150 T 950 220"
+                  fill="none"
+                  stroke="hsl(var(--accent))"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeDasharray="20 15"
+                />
+              </svg>
+
+              {/* Milestone Points */}
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-4">
+                {processSteps.map((step, index) => {
+                  const colors = [
+                    "bg-cyan-500",
+                    "bg-amber-500", 
+                    "bg-rose-500",
+                    "bg-emerald-500",
+                    "bg-violet-500"
+                  ];
+                  const isTop = index % 2 === 0;
+                  
+                  return (
+                    <div
+                      key={step.title}
+                      className={`relative animate-fade-up stagger-${index + 1} ${
+                        isTop ? "lg:mt-0" : "lg:mt-32"
+                      }`}
+                    >
+                      {/* Diamond marker */}
+                      <div className="flex flex-col items-center">
+                        <div 
+                          className={`w-12 h-12 ${colors[index]} rotate-45 flex items-center justify-center shadow-lg mb-4 lg:mb-6`}
+                        >
+                          <div className="-rotate-45">
+                            <step.icon size={20} className="text-white" />
+                          </div>
+                        </div>
+                        
+                        {/* Connector line for mobile */}
+                        <div className="lg:hidden w-0.5 h-6 bg-foreground/20 -mt-2 mb-2" />
+                        
+                        {/* Content Card */}
+                        <div className="bg-card rounded-xl p-4 shadow-md border border-border/50 max-w-xs text-center lg:text-left">
+                          <div className="flex items-center gap-2 mb-2 justify-center lg:justify-start">
+                            <span className={`w-6 h-6 rounded-full ${colors[index]} text-white text-xs font-bold flex items-center justify-center`}>
+                              {String(index + 1).padStart(2, '0')}
+                            </span>
+                            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                              Step {index + 1}
+                            </span>
+                          </div>
+                          <h3 className="text-base font-serif font-semibold text-foreground mb-1">
+                            {step.title}
+                          </h3>
+                          <p className="text-xs text-muted-foreground leading-relaxed">
+                            {step.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
