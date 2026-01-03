@@ -22,8 +22,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "savee@marketingwithvijay.com",
-    href: "mailto:savee@marketingwithvijay.com",
+    value: "marketingwithvijay@gmail.com",
+    href: "mailto:marketingwithvijay@gmail.com",
   },
   {
     icon: MapPin,
