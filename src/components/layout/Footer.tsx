@@ -13,7 +13,7 @@ const Footer = () => {
               Helping businesses scale with performance marketing, modern web development, and strategic digital systems.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent transition-colors">
+              <a href="https://www.linkedin.com/in/vijay-sharma-8836aa23b/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent transition-colors">
                 <Linkedin size={18} />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent transition-colors">

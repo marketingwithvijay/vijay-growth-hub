@@ -118,7 +118,7 @@ const HeroSection = () => {
             <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 transition-all">
               <Twitter size={18} />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 transition-all">
+            <a href="https://www.linkedin.com/in/vijay-sharma-8836aa23b/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 transition-all">
               <Linkedin size={18} />
             </a>
           </div>
@@ -192,7 +192,7 @@ const HeroSection = () => {
               <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 hover:scale-110 transition-all duration-300">
                 <Github size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 hover:scale-110 transition-all duration-300">
+              <a href="https://www.linkedin.com/in/vijay-sharma-8836aa23b/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 hover:scale-110 transition-all duration-300">
                 <Linkedin size={18} />
               </a>
             </div>
