@@ -106,6 +106,22 @@ const HeroSection = () => {
               <div className="text-xs text-muted-foreground">Ad Spend</div>
             </div>
           </div>
+
+          {/* Social Icons - Mobile */}
+          <div className="flex items-center justify-center gap-4 opacity-0 animate-fade-up" style={{
+            animationDelay: '1.1s',
+            animationFillMode: 'forwards'
+          }}>
+            <a href="https://www.instagram.com/marketingwithvijay_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 transition-all">
+              <Instagram size={18} />
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 transition-all">
+              <Twitter size={18} />
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 transition-all">
+              <Linkedin size={18} />
+            </a>
+          </div>
         </div>
 
         {/* Desktop Layout */}
