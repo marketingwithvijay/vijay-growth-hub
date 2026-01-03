@@ -54,31 +54,6 @@ const galleryImages = [
     title: "Assam Career Hub - Digital Marketing Specialization",
     category: "achievements",
   },
-  // Placeholder images for demonstration
-  {
-    id: 3,
-    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
-    title: "Team Workshop",
-    category: "events",
-  },
-  {
-    id: 4,
-    src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
-    title: "Client Meeting",
-    category: "work",
-  },
-  {
-    id: 5,
-    src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
-    title: "Strategy Session",
-    category: "work",
-  },
-  {
-    id: 6,
-    src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80",
-    title: "Award Ceremony",
-    category: "achievements",
-  },
 ];
 
 const categories = ["all", "achievements", "work", "events"];
