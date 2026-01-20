@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/layout/Layout";
 import {
@@ -50,6 +51,7 @@ const services = [
 ];
 
 const Contact = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -60,6 +62,7 @@ const Contact = () => {
   
 
   const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     e.preventDefault();
     
     // Format message for WhatsApp
@@ -79,8 +82,8 @@ ${formData.message}`;
     
     window.open(whatsappUrl, '_blank');
     
-    toast.success("Opening WhatsApp! Click send to deliver your message.");
     setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+    navigate('/thank-you');
   };
 
   return (
