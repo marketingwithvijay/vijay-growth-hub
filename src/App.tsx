@@ -12,6 +12,7 @@ import Portfolio from "./pages/Portfolio";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import ThankYou from "./pages/ThankYou";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/thank-you" element={<ThankYou />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
