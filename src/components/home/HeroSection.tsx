@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Linkedin, Twitter, Instagram } from "lucide-react";
 const HeroSection = () => {
   const services = ["Google Ads", "Meta Ads", "Web Development", "Social Media Marketing", "SEO"];
   return <section className="relative min-h-screen overflow-hidden">
@@ -188,9 +188,6 @@ const HeroSection = () => {
               </a>
               <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 hover:scale-110 transition-all duration-300">
                 <Twitter size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 hover:scale-110 transition-all duration-300">
-                <Github size={18} />
               </a>
               <a href="https://www.linkedin.com/in/vijay-sharma-8836aa23b/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/10 hover:scale-110 transition-all duration-300">
                 <Linkedin size={18} />
