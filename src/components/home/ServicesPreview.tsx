@@ -4,7 +4,7 @@ import {
   Search,
   Facebook,
   Globe,
-  Smartphone,
+  Megaphone,
   MapPin,
   TrendingUp,
 } from "lucide-react";
@@ -32,10 +32,10 @@ const services = [
     color: "bg-primary",
   },
   {
-    icon: Smartphone,
-    title: "App Development",
+    icon: Megaphone,
+    title: "Social Media Marketing",
     description:
-      "Custom Android/iOS apps with clean UI/UX and optimized performance.",
+      "Strategic social media management to grow your brand and engage audiences.",
     color: "bg-accent",
   },
   {

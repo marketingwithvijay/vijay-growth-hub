@@ -41,7 +41,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-serif font-semibold">Services</h4>
             <ul className="space-y-2">
-              {["Google Ads", "Meta Ads", "Website Development", "App Development", "GMB Optimization", "Local SEO"].map(service => <li key={service}>
+              {["Google Ads", "Meta Ads", "Website Development", "Social Media Marketing", "GMB Optimization", "Local SEO"].map(service => <li key={service}>
                   <Link to="/services" className="text-background/70 hover:text-accent transition-colors text-sm">
                     {service}
                   </Link>

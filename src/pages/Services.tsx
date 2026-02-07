@@ -6,7 +6,7 @@ import {
   Search,
   Facebook,
   Globe,
-  Smartphone,
+  Megaphone,
   MapPin,
   TrendingUp,
   Check,
@@ -63,17 +63,17 @@ const services = [
     color: "bg-primary",
   },
   {
-    icon: Smartphone,
-    title: "App Development",
+    icon: Megaphone,
+    title: "Social Media Marketing",
     description:
-      "Custom Android/iOS applications with clean UI/UX and optimized performance for your business needs.",
+      "Strategic social media management to grow your brand presence, engage audiences, and drive business results.",
     features: [
-      "Native & cross-platform apps",
-      "UI/UX design",
-      "Backend development",
-      "API integration",
-      "App store optimization",
-      "Ongoing support",
+      "Content strategy & planning",
+      "Post creation & scheduling",
+      "Community management",
+      "Influencer partnerships",
+      "Analytics & reporting",
+      "Brand awareness campaigns",
     ],
     color: "bg-accent",
   },
@@ -123,7 +123,7 @@ const Services = () => {
         <title>Services | Marketing With Vijay</title>
         <meta
           name="description"
-          content="Comprehensive digital marketing services including Google Ads, Meta Ads, SEO, Web & App Development. Grow your business with proven strategies."
+          content="Comprehensive digital marketing services including Google Ads, Meta Ads, SEO, Web Development & Social Media Marketing. Grow your business with proven strategies."
         />
       </Helmet>
       <Layout>

@@ -44,7 +44,7 @@ const services = [
   "Google Ads",
   "Meta Ads",
   "Website Development",
-  "App Development",
+  "Social Media Marketing",
   "GMB Optimization",
   "Local SEO",
   "Other",

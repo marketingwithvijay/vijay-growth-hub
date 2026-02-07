@@ -15,7 +15,7 @@ const Index = () => {
         <title>Marketing With Vijay | Performance-Driven Digital Marketer</title>
         <meta
           name="description"
-          content="Helping businesses scale using high-ROI Google Ads, Meta Ads, SEO, and full-stack Web & App Development. Book a free strategy call today."
+          content="Helping businesses scale using high-ROI Google Ads, Meta Ads, SEO, and Social Media Marketing. Book a free strategy call today."
         />
       </Helmet>
       <Layout>
