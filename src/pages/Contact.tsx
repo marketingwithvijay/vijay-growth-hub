@@ -63,7 +63,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    e.preventDefault();
     
     // Format message for WhatsApp
     const message = `*New Contact Form Submission*
