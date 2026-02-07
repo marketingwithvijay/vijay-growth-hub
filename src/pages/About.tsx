@@ -12,7 +12,6 @@ import {
   Code,
   Megaphone,
   Globe,
-  Smartphone,
   TrendingUp,
   Target,
 } from "lucide-react";
@@ -63,7 +62,7 @@ const skills = [
   { icon: Megaphone, name: "Meta Ads", level: 92 },
   { icon: TrendingUp, name: "SEO & GMB", level: 90 },
   { icon: Globe, name: "Web Development", level: 88 },
-  { icon: Smartphone, name: "App Development", level: 85 },
+  { icon: Megaphone, name: "Social Media Marketing", level: 85 },
   { icon: Target, name: "CRO", level: 88 },
 ];
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 const HeroSection = () => {
-  const services = ["Google Ads", "Meta Ads", "Web Development", "App Development", "SEO"];
+  const services = ["Google Ads", "Meta Ads", "Web Development", "Social Media Marketing", "SEO"];
   return <section className="relative min-h-screen overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10" />
@@ -78,7 +78,7 @@ const HeroSection = () => {
             <span className="text-foreground font-medium">Google Ads</span>,{" "}
             <span className="text-foreground font-medium">Meta Ads</span>,{" "}
             <span className="text-foreground font-medium">SEO</span>, and{" "}
-            <span className="text-foreground font-medium">Web & App Development</span>.
+            <span className="text-foreground font-medium">Social Media Marketing</span>.
           </p>
 
           <Link to="/contact" className="btn-primary w-full max-w-xs mb-8 opacity-0 animate-fade-up hover:scale-105 transition-transform" style={{
@@ -152,8 +152,8 @@ const HeroSection = () => {
               Helping businesses scale using high-ROI{" "}
               <span className="text-foreground font-medium">Google Ads</span>,{" "}
               <span className="text-foreground font-medium">Meta Ads</span>,{" "}
-              <span className="text-foreground font-medium">SEO</span>, and full-stack{" "}
-              <span className="text-foreground font-medium">Web & App Development</span>.
+              <span className="text-foreground font-medium">SEO</span>, and{" "}
+              <span className="text-foreground font-medium">Social Media Marketing</span>.
             </p>
 
             <div className="flex items-center gap-6 pt-2 opacity-0 animate-fade-up" style={{
